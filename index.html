@@ -19,13 +19,69 @@
                     <h2 class="fw-bold">Search for a City</h2>
                     <input id="cityInput" type="citySearch" placeholder="Search for a city here">
                     <button id="searchBtn" type="button" class="btn btn-primary">Search</button>
+                    <hr>
+                    <h3>Recent Cities</h3>
+                    <ul id="searchBtns">
+
+                    </ul>
                 </div>
-                <div id="currentCity" class="col-9 border">
+                <div id="currentCity" class="col-9 border d-none">
                     <h2 id="cityName"></h2>
+                    <img id="weatherIcon" class="d-inline" src="" alt="">
                     <p id="currentTemp"></p>
                     <p id="wind"></p>
                     <p id="humidity"></p>
                     <p id="uvIndex"></p>
+                    <h2 id="fiveDayText" class="d-none">4-Day Forecast</h2>
+                    <div id="fiveDayArea" class="container d-none">
+                        <div class="row">
+                            <!-- <div id="dayOne" class="col-3 border-end border-secondary mb-1">
+                                <hr>
+                                <p id="dateOne"></p>
+                                <hr>
+                                <img id="iconOne" src=""></img>
+                                <p id="tempOne"></p>
+                                <p id="windOne"></p>
+                                <p id="humidityOne"></p>
+                            </div> -->
+                            <div id="dayTwo" class="col-3 border-end border-secondary mb-1">
+                                <hr>
+                                <p id="dateTwo"></p>
+                                <hr>
+                                <img id="iconTwo" src=""></img>
+                                <p id="tempTwo"></p>
+                                <p id="windTwo"></p>
+                                <p id="humidityTwo"></p>
+                            </div>
+                            <div id="dayThree" class="col-3 border-end border-secondary mb-1">
+                                <hr>
+                                <p id="dateThree"></p>
+                                <hr>
+                                <img id="iconThree" src=""></img>
+                                <p id="tempThree"></p>
+                                <p id="windThree"></p>
+                                <p id="humidityThree"></p>
+                            </div>
+                            <div id="dayFour" class="col-3 border-end border-secondary mb-1">
+                                <hr>
+                                <p id="dateFour"></p>
+                                <hr>
+                                <img id="iconFour" src=""></img>
+                                <p id="tempFour"></p>
+                                <p id="windFour"></p>
+                                <p id="humidityFour"></p>
+                            </div>
+                            <div id="dayFive" class="col-3 border-secondary mb-1">
+                                <hr>
+                                <p id="dateFive"></p>
+                                <hr>
+                                <img id="iconFive" src=""></img>
+                                <p id="tempFive"></p>
+                                <p id="windFive"></p>
+                                <p id="humidityFive"></p>
+                            </div>
+                        </div>
+                    </div>
 
 
 
