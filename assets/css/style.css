@@ -2,3 +2,24 @@
 #mainHeader {
     text-align: center;
 }
+
+
+#searchBtns {
+    list-style: none;
+}
+
+#searchBtns li{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.recentCity {
+    border: none;
+    background: none;
+    font-size: 2rem;
+}
+
+.recentCity:hover {
+    background: rgba(48, 51, 216, 0.534);
+    border-radius: 10px;
+}
