@@ -18,7 +18,7 @@ buildListLoad()
 
 $('#searchBtn').on('click', function() {
     var citySearched = $('#cityInput').val()
-    var requestCity = 'http://api.openweathermap.org/data/2.5/weather?q=' +citySearched + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
+    var requestCity = 'https://api.openweathermap.org/data/2.5/weather?q=' +citySearched + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
     $('#cityInput').val('')
     $('.recentCity').off('click')
 
@@ -48,7 +48,7 @@ $('#searchBtn').on('click', function() {
     $('.recentCity').on('click', function(event) {
         event.preventDefault()
         var recentCitySearched = $(this).text()
-        var recentCityUrl = 'http://api.openweathermap.org/data/2.5/weather?q=' +recentCitySearched + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
+        var recentCityUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' +recentCitySearched + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
         console.log(recentCitySearched)
         
 
@@ -59,7 +59,7 @@ $('#searchBtn').on('click', function() {
         .then(function (data) {
             console.log(data)
             $('#cityName').text(recentCitySearched + ' | Current Weather')
-            var iconURL = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '.png'
+            var iconURL = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png'
             $('#weatherIcon').attr('src', iconURL)
             $('#currentTemp').text('Temp: ' + data.main.temp + ' degrees')
             $('#wind').text('Wind: ' + data.wind.speed)
@@ -70,7 +70,7 @@ $('#searchBtn').on('click', function() {
             $('#fiveDayArea').removeClass('d-none')
             var lat = data.coord.lat
             var lon = data.coord.lon
-            var requestLatLon = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
+            var requestLatLon = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
 
             fetch(requestLatLon)
                 .then(function (response) {
@@ -81,7 +81,7 @@ $('#searchBtn').on('click', function() {
                     
                     var dateSplit = data.list[0].dt_txt
                     var splitSplat = dateSplit.split(' ')
-                    var fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[0].weather[0].icon + '.png'
+                    var fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[0].weather[0].icon + '.png'
 
 
                     // $('#dateOne').text(splitSplat[0])
@@ -92,7 +92,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[8].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '.png'
 
 
                     $('#dateTwo').text(splitSplat[0])
@@ -104,7 +104,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[16].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[16].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[16].weather[0].icon + '.png'
 
 
                     $('#dateThree').text(splitSplat[0])
@@ -116,7 +116,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[24].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[24].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[24].weather[0].icon + '.png'
 
 
                     $('#dateFour').text(splitSplat[0])
@@ -128,7 +128,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[32].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
 
 
                     $('#dateFive').text(splitSplat[0])
@@ -140,7 +140,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[32].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
 
 
                     $('#dateFive').text(splitSplat[0])
@@ -169,7 +169,7 @@ $('#searchBtn').on('click', function() {
         .then(function (data) {
             console.log(data)
             $('#cityName').text(citySearched + ' | Current Weather')
-            var iconURL = 'http://openweathermap.org/img/wn/' + data.weather[0].icon + '.png'
+            var iconURL = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '.png'
             $('#weatherIcon').attr('src', iconURL)
             $('#currentTemp').text('Temp: ' + data.main.temp + ' degrees')
             $('#wind').text('Wind: ' + data.wind.speed)
@@ -180,7 +180,7 @@ $('#searchBtn').on('click', function() {
             $('#fiveDayArea').removeClass('d-none')
             var lat = data.coord.lat
             var lon = data.coord.lon
-            var requestLatLon = 'http://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
+            var requestLatLon = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
 
             fetch(requestLatLon)
                 .then(function (response) {
@@ -191,7 +191,7 @@ $('#searchBtn').on('click', function() {
                     
                     var dateSplit = data.list[0].dt_txt
                     var splitSplat = dateSplit.split(' ')
-                    var fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[0].weather[0].icon + '.png'
+                    var fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[0].weather[0].icon + '.png'
 
 
                     // $('#dateOne').text(splitSplat[0])
@@ -202,7 +202,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[8].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[8].weather[0].icon + '.png'
 
 
                     $('#dateTwo').text(splitSplat[0])
@@ -214,7 +214,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[16].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[16].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[16].weather[0].icon + '.png'
 
 
                     $('#dateThree').text(splitSplat[0])
@@ -226,7 +226,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[24].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[24].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[24].weather[0].icon + '.png'
 
 
                     $('#dateFour').text(splitSplat[0])
@@ -238,7 +238,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[32].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
 
 
                     $('#dateFive').text(splitSplat[0])
@@ -250,7 +250,7 @@ $('#searchBtn').on('click', function() {
 
                     dateSplit = data.list[32].dt_txt
                     splitSplat = dateSplit.split(' ')
-                    fiveDayIcon = 'http://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
+                    fiveDayIcon = 'https://openweathermap.org/img/wn/' + data.list[32].weather[0].icon + '.png'
 
 
                     $('#dateFive').text(splitSplat[0])
