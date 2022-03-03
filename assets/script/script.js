@@ -20,6 +20,7 @@ $('#searchBtn').on('click', function() {
     var citySearched = $('#cityInput').val()
     var requestCity = 'http://api.openweathermap.org/data/2.5/weather?q=' +citySearched + '&units=imperial&appid=4c0e740bd6d538f33945371d3b5dfc94'
     $('#cityInput').val('')
+    $('.recentCity').off('click')
 
     savedCity.push(citySearched)
     // JSON.parse(savedCity)
